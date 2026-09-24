@@ -3,46 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#F3F4EF">
+<meta name="robots" content="noindex,nofollow">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Hytta">
+<meta name="theme-color" content="#e7e3dd">
+<style>html,body{margin:0;padding:0}body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}</style>
 <title>Hytta fra bunnen</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
-  --paper:#F3F4EF; --paper-2:#E7E9E0; --surface:#FFFFFF; --surface-2:#E9EBE2; --surface-3:#F8F9F5;
-  --ink:#161A14; --ink-2:#545A50; --ink-3:#6C7268;
-  --line:#DBDFD4; --line-strong:#C1C7B7;
-  --accent:#2E6B55; --accent-soft:#DCEAE3; --accent-ink:#22523F; --on-accent:#FFFFFF;
-  --warn:#845611; --warn-soft:#F3E6CD;
-  --crit:#94372B; --crit-soft:#F5DED8;
+  --paper:#F2F1EF; --paper-2:#E6E2DF; --surface:#FFFFFF; --surface-2:#EDEAE6; --surface-3:#F8F7F5;
+  --ink:#16161A; --ink-2:#55555C; --ink-3:#84848B;
+  --line:#DEDAD6; --line-strong:#C6C1BB;
+  --accent:#4A1226; --accent-soft:#FBE7EB; --accent-ink:#4A1226; --on-accent:#F7DDE2;
+  --sage:#A8C3AF; --navy:#37485A;
+  --warn:#7A5716; --warn-soft:#F3E8D3;
+  --crit:#8D2F24; --crit-soft:#F6E0DB;
+  --h1bg:#4A1226; --h1fg:#F7DDE2; --h1sub:#E7BFC8;
+  --h2bg:#A8C3AF; --h2fg:#15231A; --h2sub:#3B5643;
+  --h3bg:#FBE7EB; --h3fg:#4A1226; --h3sub:#7A3348;
+  --h4bg:#37485A; --h4fg:#F1F3F5; --h4sub:#BFCBD8;
   --focus:#1558B0;
-  --sans:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
-  --disp:"Familjen Grotesk","Instrument Sans",Arial,sans-serif;
+  --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --disp:"Newsreader",Georgia,serif;
   --r:14px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#101310; --paper-2:#171B16; --surface:#181C17; --surface-2:#232821; --surface-3:#1D211C;
-    --ink:#E9ECE3; --ink-2:#A6AD9F; --ink-3:#8D9587;
-    --line:#2C322B; --line-strong:#404939;
-    --accent:#84C7A6; --accent-soft:#1D3A2D; --accent-ink:#A9DCC1; --on-accent:#0E1A14;
-    --warn:#E2B672; --warn-soft:#382D15;
-    --crit:#F0998A; --crit-soft:#3C201A;
-    --focus:#8FC2FF;
+    --paper:#16161A; --paper-2:#1D1D22; --surface:#212127; --surface-2:#2B2B32; --surface-3:#1B1B20;
+    --ink:#F2F0EE; --ink-2:#A9A7AE; --ink-3:#82808A;
+    --line:#33333A; --line-strong:#4A4A53;
+    --accent:#EFC9D2; --accent-soft:#3B1A24; --accent-ink:#F3D7DD; --on-accent:#2A0A15;
+    --sage:#6E8E77; --navy:#8FA6BC;
+    --warn:#DCB271; --warn-soft:#3A2F17;
+    --crit:#EF9081; --crit-soft:#3C2019;
+    --h1bg:#3B1A24; --h1fg:#F5DCE1; --h1sub:#D3A9B3;
+  --h2bg:#31453A; --h2fg:#DCE8DF; --h2sub:#A9C0B0;
+  --h3bg:#2E2128; --h3fg:#EFC9D2; --h3sub:#BE97A2;
+  --h4bg:#243039; --h4fg:#DDE6EE; --h4sub:#A6B6C5;
+  --focus:#8FC2FF;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#101310; --paper-2:#171B16; --surface:#181C17; --surface-2:#232821; --surface-3:#1D211C;
-  --ink:#E9ECE3; --ink-2:#A6AD9F; --ink-3:#8D9587;
-  --line:#2C322B; --line-strong:#404939;
-  --accent:#84C7A6; --accent-soft:#1D3A2D; --accent-ink:#A9DCC1; --on-accent:#0E1A14;
-  --warn:#E2B672; --warn-soft:#382D15;
-  --crit:#F0998A; --crit-soft:#3C201A;
+    --paper:#16161A; --paper-2:#1D1D22; --surface:#212127; --surface-2:#2B2B32; --surface-3:#1B1B20;
+  --ink:#F2F0EE; --ink-2:#A9A7AE; --ink-3:#82808A;
+  --line:#33333A; --line-strong:#4A4A53;
+  --accent:#EFC9D2; --accent-soft:#3B1A24; --accent-ink:#F3D7DD; --on-accent:#2A0A15;
+  --sage:#6E8E77; --navy:#8FA6BC;
+  --warn:#DCB271; --warn-soft:#3A2F17;
+  --crit:#EF9081; --crit-soft:#3C2019;
+  --h1bg:#3B1A24; --h1fg:#F5DCE1; --h1sub:#D3A9B3;
+  --h2bg:#31453A; --h2fg:#DCE8DF; --h2sub:#A9C0B0;
+  --h3bg:#2E2128; --h3fg:#EFC9D2; --h3sub:#BE97A2;
+  --h4bg:#243039; --h4fg:#DDE6EE; --h4sub:#A6B6C5;
   --focus:#8FC2FF;
+}
+body[data-mode="dark"]{
+  --paper:#16161A; --paper-2:#1D1D22; --surface:#212127; --surface-2:#2B2B32; --surface-3:#1B1B20;
+  --ink:#F2F0EE; --ink-2:#A9A7AE; --ink-3:#82808A;
+  --line:#33333A; --line-strong:#4A4A53;
+  --accent:#EFC9D2; --accent-soft:#3B1A24; --accent-ink:#F3D7DD; --on-accent:#2A0A15;
+  --sage:#6E8E77; --navy:#8FA6BC;
+  --warn:#DCB271; --warn-soft:#3A2F17;
+  --crit:#EF9081; --crit-soft:#3C2019;
+  --h1bg:#3B1A24; --h1fg:#F5DCE1; --h1sub:#D3A9B3;
+  --h2bg:#31453A; --h2fg:#DCE8DF; --h2sub:#A9C0B0;
+  --h3bg:#2E2128; --h3fg:#EFC9D2; --h3sub:#BE97A2;
+  --h4bg:#243039; --h4fg:#DDE6EE; --h4sub:#A6B6C5;
+  --focus:#8FC2FF;
+}
+body[data-mode="light"]{
+  --paper:#F2F1EF; --paper-2:#E6E2DF; --surface:#FFFFFF; --surface-2:#EDEAE6; --surface-3:#F8F7F5;
+  --ink:#16161A; --ink-2:#55555C; --ink-3:#84848B;
+  --line:#DEDAD6; --line-strong:#C6C1BB;
+  --accent:#4A1226; --accent-soft:#FBE7EB; --accent-ink:#4A1226; --on-accent:#F7DDE2;
+  --sage:#A8C3AF; --navy:#37485A;
+  --warn:#7A5716; --warn-soft:#F3E8D3;
+  --crit:#8D2F24; --crit-soft:#F6E0DB;
+  --h1bg:#4A1226; --h1fg:#F7DDE2; --h1sub:#E7BFC8;
+  --h2bg:#A8C3AF; --h2fg:#15231A; --h2sub:#3B5643;
+  --h3bg:#FBE7EB; --h3fg:#4A1226; --h3sub:#7A3348;
+  --h4bg:#37485A; --h4fg:#F1F3F5; --h4sub:#BFCBD8;
+  --focus:#1558B0;
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:120px;scroll-padding-bottom:190px;-webkit-text-size-adjust:100%}
@@ -57,12 +102,9 @@ h1,h2{margin:0;font-family:var(--disp);font-weight:600;letter-spacing:-.025em;te
 
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--paper);border-bottom:1px solid var(--line)}
 .top-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
-.brand{font-family:var(--disp);font-weight:700;font-size:1.125rem;letter-spacing:-.03em}
+.brand{font-family:var(--disp);font-weight:700;font-size:1.125rem;letter-spacing:-.03em;padding:8px 10px 8px 0;margin-left:-2px;border-radius:10px;color:var(--ink)}
+.brand:disabled{cursor:default}
 .brand span{color:var(--accent)}
-.brandback{display:inline-flex;align-items:center;gap:6px;min-height:46px;margin-left:-8px;padding:0 10px;border-radius:999px;
-  font-family:var(--disp);font-weight:600;font-size:1rem;letter-spacing:-.01em;color:var(--ink)}
-.brandback svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;flex:none}
-.brandback span{max-width:42vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 /* Alt utenfor hovedflyten står på en egen, litt mørkere flate */
 body.side{background:var(--paper-2)}
 body.side .top{background:var(--paper-2)}
@@ -82,11 +124,6 @@ body.side .legend,body.side .nick,body.side .sugg button{background:var(--surfac
 .cycle li.on::before{content:"";width:7px;height:7px;border-radius:99px;background:var(--accent);margin-right:-2px}
 .cycle .loop{font-size:.8125rem;color:var(--ink-3);margin-left:-2px}
 .where{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin:22px 0 6px}
-.illu{display:block;width:100%;max-width:215px;margin:10px 0 30px;color:var(--ink)}
-.illu .f{fill:currentColor;stroke:none}
-.illu .cut{fill:var(--paper);stroke:none}
-.illu .s{fill:none;stroke:currentColor;stroke-width:9}
-.illu .s2{fill:var(--paper);stroke:currentColor;stroke-width:9;stroke-linejoin:miter}
 .carry{border-left:3px solid var(--line-strong);padding-left:12px;opacity:.75}
 
 main{padding-bottom:180px;min-height:70vh}
@@ -96,6 +133,17 @@ main{padding-bottom:180px;min-height:70vh}
 .lede{color:var(--ink-2);font-size:.9375rem;margin:0 0 28px;max-width:34em}
 .note{font-size:.875rem;color:var(--warn);background:var(--warn-soft);border-radius:10px;padding:11px 14px;margin:0 0 20px}
 
+.hero{display:block;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;position:relative;text-align:left;margin-bottom:10px}
+.hero-label{display:block;font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.hero h1{font-size:clamp(1.75rem,7.5vw,2.25rem);line-height:1.04;margin:0 0 8px;padding-right:40px}
+.hero-sub{display:block;font-size:.9375rem;color:var(--ink-2)}
+.hero-go{position:absolute;right:18px;top:18px;width:36px;height:36px;border-radius:999px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:1.05rem}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tiles button{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 16px;min-height:100px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;text-align:left}
+.t-n{font-family:var(--disp);font-size:1.0625rem;font-weight:600;letter-spacing:-.01em}
+.t-c{font-size:.8125rem;color:var(--ink-2)}
+.quietrow{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;min-height:62px;margin-top:10px;padding:0 20px;background:var(--surface);border:1px solid var(--line);border-radius:16px;font-size:1rem;font-weight:500}
+.quietrow span{color:var(--ink-2);font-size:.875rem;font-weight:400}
 .rows{border-top:1px solid var(--line)}
 .row{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);min-height:62px}
 .row-main{flex:1;min-width:0;padding:12px 4px 12px 0;display:block;border-radius:8px}
@@ -130,7 +178,10 @@ main{padding-bottom:180px;min-height:70vh}
 .nick{width:100%;margin-top:6px;min-height:42px;border-radius:10px;border:1px solid var(--line-strong);background:var(--surface-3);padding:8px 12px;font-size:.9375rem}
 .btn:disabled{opacity:.45;cursor:default}
 .legend{font-size:.8125rem;color:var(--ink-2);background:var(--surface-3);border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin:0 0 14px}
+.stwarn{margin:0 0 20px;padding:14px 16px;border-radius:18px;background:var(--surface-3);
+  border:1px solid var(--line-strong);font-size:.9375rem;line-height:1.45}
 .sugg{display:flex;flex-wrap:wrap;gap:8px}
+.sugg+.legend,.sugg+.rows{margin-top:26px}
 .sugg button{min-height:44px;padding:0 15px;border-radius:999px;border:1px dashed var(--line-strong);background:var(--surface-3);font-size:.9375rem}
 .check .row-meta{margin-top:1px}
 .check > span:not(.box){flex:1;min-width:0}
@@ -215,7 +266,8 @@ main{padding-bottom:180px;min-height:70vh}
 .qtyrow{display:flex;align-items:center;gap:10px}
 .qtyrow input{width:90px;text-align:center}
 .qtyrow .stepper button{width:50px;height:50px}
-.photo-row{display:flex;gap:12px;align-items:center}
+.photo-row{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.picbtns{display:flex;gap:7px;flex-wrap:wrap;flex:1;min-width:150px}
 .photo-prev{flex:none;width:76px;height:76px;border-radius:12px;object-fit:cover;border:1px solid var(--line);background:var(--surface-2)}
 .more{font-size:.875rem;color:var(--accent);text-decoration:underline;text-underline-offset:3px;padding:10px 0;font-weight:500}
 .sheetbtns{display:flex;gap:8px;margin-top:22px}
@@ -229,34 +281,118 @@ main{padding-bottom:180px;min-height:70vh}
   font-size:.9375rem;max-width:calc(100vw - 32px);box-shadow:0 8px 26px rgba(20,28,20,.3)}
 .toast button{color:var(--paper);font-weight:600;text-decoration:underline;text-underline-offset:3px;padding:6px 12px;min-height:36px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
-</style>
-<style>
-:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{background:#F3F4EF}
-@media (prefers-color-scheme: dark){html{background:#101310}}
-img{max-width:100%}
-[hidden]{display:none!important}
-</style>
-</head>
-<body>
 
+/* ====================================================================
+   Visuelt uttrykk: varm greige, dyp burgunder, serif-overskrifter,
+   monolabels og myke former.
+==================================================================== */
+:root{--r:18px}
+body{font-family:var(--sans)}
+h1,h2,.woodstate,.hero h1,.focus h1{font-family:var(--disp);font-weight:500;letter-spacing:-.01em}
+.screen h1{font-size:clamp(2.1rem,9vw,2.7rem);line-height:1.08}
+.hero h1{font-size:clamp(1.9rem,8vw,2.4rem);line-height:1.1}
+.focus h1{font-size:clamp(2.4rem,12vw,3.2rem);line-height:1.02}
+.where,.grouplbl,.hero-label,.count,.flabel,.field label,.synline,.steplbl,.cycle li,.t-c,.check-qty,.tag,
+.searchfield input::placeholder,.addline input::placeholder,.legend,.navlist .c,.sub.num{font-family:var(--mono)}
+.where,.grouplbl,.hero-label,.count,.flabel,.field label,.synline{letter-spacing:.1em;font-weight:400}
+.cycle li{letter-spacing:.06em;font-weight:400}
+
+/* former: mykt og avrundet */
+.btn,.mini,.addline button,.chips button,.roomlist button,.sugg button,.tabs button,.iconbtn,.star,.rowmore,
+.stepper button,.searchfield input,.addline input,.badge,.tag,.toast,.hero-go{border-radius:999px}
+.hero,.tiles button,.quietrow,.wood,.legend,.note,.field input,.field textarea,.nick,.thumb,.photo,
+.photo-prev,.meter button,.box{border-radius:var(--r)}
+.thumb,.box{border-radius:12px}
+.sheet{border-radius:26px 26px 0 0}
+@media(min-width:620px){.sheet{border-radius:26px}}
+.grab{width:44px;height:4px;border-radius:99px;background:var(--line-strong);margin:8px auto 18px}
+
+/* knapper */
+.btn{font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:1rem;font-weight:600;min-height:56px}
+.btn.primary,.btn.dark{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.mini,.addline button{text-transform:none;letter-spacing:0;font-weight:500;font-size:.875rem}
+.addline button[type="submit"]{background:var(--accent);color:var(--on-accent);flex:none;padding:0 18px;white-space:nowrap}
+.addline{gap:8px}
+.addline input{min-width:0;flex:1 1 auto}
+.chips button[aria-pressed="true"],.roomlist button.sug{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.hero-go{background:var(--accent);color:var(--on-accent)}
+.mini.solid{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+
+/* flater */
+body{background:var(--paper)}
+.top{background:var(--paper-2);border-bottom:0}
+body.side{background:var(--paper)}
+body.side .top{background:var(--paper-2)}
+body.side .bar{background:linear-gradient(to top,var(--paper) 58%,color-mix(in srgb,var(--paper) 0%,transparent))}
+.hero{background:var(--paper-2);border:0;padding:26px 22px 24px}
+.tiles button,.quietrow,.wood{background:var(--surface);border:1px solid var(--line)}
+.rows,.navlist{border-top:1px solid var(--line)}
+.row{border-bottom:1px solid var(--line)}
+.legend{background:var(--surface);border:1px solid var(--line)}
+.tabs{background:none;padding:0;gap:0;border-radius:0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{border-radius:999px;min-height:42px;color:var(--ink-2);background:var(--accent-soft);margin:0 6px 10px 0;flex:0 0 auto;padding:0 18px}
+.tabs button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.meter button{border-radius:12px}
+
+/* søkefelt som på forsiden */
+.homesearch{display:flex;align-items:center;gap:12px;width:100%;min-height:58px;padding:0 6px 0 22px;margin:0 0 12px;
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:999px;font-family:var(--mono);
+  font-size:.9375rem;color:var(--ink-3);text-align:left}
+.homesearch span{flex:1;min-width:0}
+.homesearch i{flex:none;width:44px;height:44px;border-radius:999px;background:var(--ink);display:grid;place-items:center}
+.homesearch svg{width:18px;height:18px;stroke:var(--paper);fill:none;stroke-width:2}
+.searchfield input{font-family:var(--mono);font-size:.9375rem}
+
+/* topplinje */
+.top-inner{min-height:66px}
+.brand{font-family:var(--sans);font-weight:600;font-size:1.0625rem;letter-spacing:-.01em}
+.menubtn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 6px;font-size:1rem;font-weight:500;color:var(--ink)}
+.menubtn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}
+
+/* meny */
+.themerow{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;min-height:58px;
+  padding:0 2px;border-bottom:1px solid var(--line);font-size:1rem}
+.themerow .st{display:inline-flex;align-items:center;gap:9px;color:var(--ink-2);font-size:.875rem}
+.themerow svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+.t-n,.navlist .n,.row-name,.check-txt,.sheet h2{font-family:var(--sans)}
+.sheet h2{font-weight:600;font-size:1.25rem}
+.tag{background:var(--accent-soft);color:var(--accent-ink)}
+.tag.out{background:var(--crit-soft);color:var(--crit)}
+.note{background:var(--accent-soft);color:var(--accent-ink);border:0}
+
+/* forsiden: fargede flater og serif på titlene */
+.hero{background:var(--h1bg);color:var(--h1fg);padding:34px 24px 30px;margin-bottom:12px}
+.hero-label{color:var(--h1sub)}
+.hero h1{font-size:clamp(2.1rem,9vw,2.7rem);line-height:1.05;margin-bottom:10px}
+.hero-sub{color:var(--h1sub);font-size:1rem}
+.hero-go{background:var(--h1fg);color:var(--h1bg);width:44px;height:44px;right:22px;top:22px;font-size:1.15rem}
+.tiles{gap:12px}
+.tiles button{border:0;min-height:132px;padding:22px 20px}
+.tiles button:first-child{background:var(--h2bg);color:var(--h2fg)}
+.tiles button:first-child .t-c{color:var(--h2sub)}
+.tiles button:last-child{background:var(--h3bg);color:var(--h3fg)}
+.tiles button:last-child .t-c{color:var(--h3sub)}
+.t-n{font-family:var(--disp);font-weight:500;font-size:1.375rem;letter-spacing:-.01em}
+.t-c{font-size:.8125rem}
+.quietrow{background:var(--h4bg);color:var(--h4fg);border:0;min-height:74px;margin-top:12px;padding:0 24px;
+  font-family:var(--disp);font-weight:500;font-size:1.375rem}
+.quietrow span{color:var(--h4sub);font-family:var(--mono);font-size:.8125rem}
+.homesearch{margin-bottom:22px}
+.addwrap{margin:0 0 26px}
+.addwrap .btn{width:100%}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
 
 <header class="top">
   <div class="wrap top-inner">
-    <div class="brand" id="brand">Hytta<span>.</span></div>
-    <button class="brandback" id="brandback" hidden data-a="closebrowse">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span id="backlbl">Tilbake</span>
-    </button>
+    <button class="brand" id="brand" data-a="gohome" aria-label="Til startsiden">Hytta<span>.</span></button>
     <div class="topbtns" id="topbtns">
       <button class="iconbtn" id="searchbtn" aria-label="Søk">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
-      <button class="iconbtn" id="listbtn" aria-label="Lista til neste tur" aria-haspopup="dialog">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3.6h6a1 1 0 0 1 1 1V6H8V4.6a1 1 0 0 1 1-1z"/><path d="M8 5.2H6.4A1.4 1.4 0 0 0 5 6.6v12.8a1.4 1.4 0 0 0 1.4 1.4h11.2a1.4 1.4 0 0 0 1.4-1.4V6.6a1.4 1.4 0 0 0-1.4-1.4H16"/><path d="M8.6 11h6.8M8.6 15h4.4"/></svg>
-        <span class="badge num" id="listbadge" hidden>0</span>
-      </button>
-      <button class="iconbtn" id="menubtn" aria-label="Meny" aria-haspopup="dialog">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button class="menubtn" id="menubtn" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h11M4 17h16"/></svg>Meny
       </button>
     </div>
   </div>
@@ -275,7 +411,13 @@ img{max-width:100%}
    LAGRING — ett lag, to backends: skyen når den finnes, ellers lokalt.
 ====================================================================== */
 var SCHEMA=5, CACHE_KEY="hytta.v5";
-var db=null, assets=null, syncState="lokalt";
+/* Noen nettlesere (privat modus, blokkerte informasjonskapsler) nekter
+   å lagre. Da må vi si fra, ikke bare glemme alt neste gang. */
+var STORAGE_OK=(function(){
+  try{localStorage.setItem("hytta.probe","1");localStorage.removeItem("hytta.probe");return true;}
+  catch(e){return false;}
+})();
+var db=null, assets=null, LOADING=false, syncState=STORAGE_OK?"lokalt":"av i denne nettleseren";
 var Cache={
   read:function(){try{var r=localStorage.getItem(CACHE_KEY);return r?JSON.parse(r):null}catch(e){return null}},
   write:function(s){try{localStorage.setItem(CACHE_KEY,JSON.stringify(s));}catch(e){if(!Cache._w){Cache._w=1;toast("Lite lagringsplass lokalt");}}}
@@ -339,7 +481,7 @@ var browse={view:"rom",place:null,cat:null};   /* rom | kat | brukere | ved */
 /* Flere brukere deler hytta: vi lagrer bare id-en til den som endret noe,
    og slår opp navnet i visningen. */
 var USERCAP=null,MEID=null,MEROLE="",PROFILES={},PENDING={},userTried=false;
-var query="", openGroups={}, roundOpen=null;
+var query="", openGroups={}, roundOpen=null, returnTo="step";
 
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
@@ -378,9 +520,10 @@ function photoSrc(o){
   if(o.photoId)return "/_blob/"+o.photoId;
   return o.woodPhoto||o.photo||"";
 }
-function pickPhoto(cb){
+function pickPhoto(cb,camera){
   var inp=document.createElement("input");
   inp.type="file";inp.accept="image/*";inp.style.cssText="position:fixed;left:-9999px";
+  if(camera)inp.setAttribute("capture","environment");
   document.body.appendChild(inp);
   inp.onchange=function(){var f=inp.files&&inp.files[0];document.body.removeChild(inp);if(f)processPhoto(f,cb);};
   inp.click();
@@ -397,11 +540,13 @@ function processPhoto(file,cb){
     if(assets&&c.toBlob){
       c.toBlob(function(b){
         if(!b)return toast("Fikk ikke lest bildet");
-        assets.upload(b).then(function(r){cb({photoId:r.id,photo:null});})
-                        .catch(function(){cb({photoId:null,photo:c.toDataURL("image/jpeg",.7)});});
+        assets.upload(b).then(function(r){cb({photoId:r.id,photo:null,blob:b});})
+                        .catch(function(){cb({photoId:null,photo:c.toDataURL("image/jpeg",.7),blob:b});});
       },"image/jpeg",.82);
     }else{
-      try{cb({photoId:null,photo:c.toDataURL("image/jpeg",.7)});}catch(e){toast("Fikk ikke lagret bildet");}
+      var du="";try{du=c.toDataURL("image/jpeg",.7);}catch(e){return toast("Fikk ikke lagret bildet");}
+      if(c.toBlob)c.toBlob(function(b){cb({photoId:null,photo:du,blob:b});},"image/jpeg",.85);
+      else cb({photoId:null,photo:du,blob:null});
     }
   };
   img.onerror=function(){URL.revokeObjectURL(u);toast("Fikk ikke lest bildet");};
@@ -450,11 +595,30 @@ function seed(){
 }
 
 /* ============================== Oppstart ============================== */
+function themeGet(){try{return localStorage.getItem("hytta.theme")||"auto";}catch(e){return "auto";}}
+function themeSet(v){try{localStorage.setItem("hytta.theme",v);}catch(e){}applyTheme();}
+function applyTheme(){
+  var t=themeGet();
+  if(t==="auto")document.body.removeAttribute("data-mode");
+  else document.body.setAttribute("data-mode",t);
+}
+function themeIsDark(){
+  var t=themeGet();
+  if(t!=="auto")return t==="dark";
+  return !!(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches);
+}
 function boot(){
+  applyTheme();
   var c=Cache.read();
   if(c&&c.places&&c.places.length&&c.settings&&c.settings.schema===SCHEMA){S=c;S.settings=normSettings(S.settings);}
   else{seed();Cache.write(S);}
-  sortPlaces();bindStatic();render();connect();
+  sortPlaces();
+  if(S.settings.onboarded)screen="home";   /* startsiden er utgangspunktet */
+  /* Har vi ingenting lokalt, men kan snakke med skyen: vent litt med å
+     tilby oppsett, så vi ikke ber deg sette opp en hytte du alt har. */
+  LOADING=!!(window.claude&&window.claude.use)&&!S.places.length;
+  if(LOADING)setTimeout(function(){if(LOADING){LOADING=false;render();}},9000);
+  bindStatic();render();connect();
 }
 function initUser(){
   if(!(window.claude&&window.claude.use)){userTried=true;return;}
@@ -490,24 +654,37 @@ function ensureNames(ids){
     render();
   }).catch(function(){need.forEach(function(i){PROFILES[i]={name:""};});});
 }
+function doneLoading(){if(!LOADING)return;LOADING=false;render();}
 function connect(){
-  if(!(window.claude&&window.claude.use))return;
-  initUser();
+  if(!(window.claude&&window.claude.use))return doneLoading();
+  initUser();initSample();
   try{Promise.resolve(window.claude.use("assets")).then(function(a){assets=a||null;}).catch(noop);}catch(e){}
-  var p;try{p=window.claude.use("db");}catch(e){return;}
+  var p;try{p=window.claude.use("db");}catch(e){return doneLoading();}
   Promise.resolve(p).then(function(cap){
-    if(!cap)return;
+    if(!cap)return doneLoading();
     db=cap;
     return Promise.all([db.collection("places").get(),db.collection("items").get(),
                         db.collection("list").get(),db.doc("meta/settings").get()])
     .then(function(r){
       var stored=r[3].exists?r[3].data():null;
-      if((r[0].empty&&r[1].empty)||!stored||stored.schema!==SCHEMA)return wipeAndPush(r);
-      S.places=r[0].docs.map(toObj);S.items=r[1].docs.map(toObj);S.list=r[2].docs.map(toObj);
-      S.settings=normSettings(stored);
-      sortPlaces();Cache.write(S);render();
-    }).then(function(){syncState="synkronisert";subscribe();render();});
-  }).catch(function(){db=null;});
+      var remoteEmpty=r[0].empty&&r[1].empty;
+      var stale=!!(stored&&stored.schema!==SCHEMA);
+      if(!remoteEmpty&&!stale){
+        /* Skyen har hytta – den vinner alltid over en tom telefon */
+        S.places=r[0].docs.map(toObj);S.items=r[1].docs.map(toObj);S.list=r[2].docs.map(toObj);
+        S.settings=normSettings(stored||S.settings);
+        if(S.places.length)S.settings.onboarded=true;   /* har du rom, er du ferdig med oppsettet */
+        sortPlaces();Cache.write(S);
+        if(screen==="step"&&S.settings.onboarded)screen="home";
+        render();
+        return;
+      }
+      /* Skyen er tom eller utdatert. Vi legger BARE opp noe hvis vi
+         faktisk har noe å legge opp – ellers ville en tom start slettet
+         hytta for alle. */
+      if(S.places.length)return wipeAndPush(r);
+    }).then(function(){syncState="synkronisert";LOADING=false;subscribe();render();});
+  }).catch(function(){db=null;doneLoading();});
 }
 function toObj(d){var o=d.data()||{};o.id=d.id;return o;}
 function wipeAndPush(r){
@@ -552,16 +729,14 @@ function later(){clearTimeout(rt);rt=setTimeout(render,650);}
 function render(){
   clearTimeout(rt);
   var fk=document.activeElement&&document.activeElement.dataset?document.activeElement.dataset.fk:null;
-  var out=(screen==="browse")?viewBrowse():viewStep();
+  if(screen==="home"&&!S.settings.onboarded)screen="step";
+  var out=(screen==="browse")?viewBrowse():(screen==="home"?viewHome():viewStep());
   var side=(screen==="browse");
   document.body.classList.toggle("side",side);
-  document.getElementById("brand").hidden=side;
-  document.getElementById("brandback").hidden=!side;
-  if(side)document.getElementById("backlbl").textContent=phaseDef().strip;
+  document.getElementById("brand").disabled=!S.settings.onboarded;
   document.getElementById("topbtns").hidden=!S.settings.onboarded;
-  var lb=document.getElementById("listbadge");
-  lb.textContent=S.list.length;lb.hidden=!S.list.length;
-  main.innerHTML=out.html;
+
+  main.innerHTML=storageWarning()+out.html;
   if(out.bar){bar.hidden=false;bar.innerHTML='<div class="inner">'+out.bar+'</div>';}
   else{bar.hidden=true;bar.innerHTML="";}
   if(fk){var el=document.querySelector('[data-fk="'+fk+'"]');if(el)el.focus();}
@@ -649,6 +824,13 @@ function woodCard(){
   return h+'</div>';
 }
 function syncLine(){return '<p class="synline">Lagring: '+esc(syncState)+'</p>';}
+/* Står øverst overalt så lenge ingenting kan lagres – da vet du hvorfor
+   hytta er borte neste gang du åpner. */
+function storageWarning(){
+  if(STORAGE_OK||db)return "";
+  return '<p class="stwarn">Appen får ikke lagre i denne nettleseren, så alt forsvinner når du lukker den. '+
+    'Skjer det i privat nettlesing, prøv et vanlig vindu. Ellers: ta en sikkerhetskopi fra menyen.</p>';
+}
 
 /* ========================= Oppsett av hytta =========================
    Fersk bruker: velg rom → fyll dem → sett vednivå → i gang. */
@@ -669,7 +851,6 @@ function viewSetup(){
 function setupWelcome(){
   return {
     html:'<section class="screen" style="padding-top:34px"><h1>Hva har vi<br>på hytta?</h1>'+
-      illuSun()+
       '<p class="lede">Vi setter opp hytta di på et par minutter: først hvilke rom du har, så hva som finnes i dem. Du kan endre alt senere.</p></section>',
     bar:'<button type="button" class="btn dark" data-a="s-start">Sett opp hytta</button>'
   };
@@ -721,7 +902,8 @@ function setupFill(){
     bar:'<div class="barrow">'+
       (st.setupIdx>0?'<button type="button" class="btn" data-a="s-prev">Forrige</button>':"")+
       '<button type="button" class="btn dark" data-a="s-next">'+(st.setupIdx+1<S.places.length?"Neste rom":"Ferdig med rommene")+'</button></div>'+
-      '<button type="button" class="quiet" data-a="s-skipfill">Hopp over resten</button>'};
+      (SAMPLE_IMG?'<button type="button" class="quiet" data-a="scan" data-p="'+p.id+'">Legg til fra bilde</button>':"")+
+      '<button type="button" class="quiet" data-a="s-skipfill">Fyll ut senere</button>'};
 }
 function setupWood(){
   return {
@@ -739,9 +921,190 @@ function setupDone(){
   };
 }
 
+
+/* ===================== Bildegjenkjenning =====================
+   Ta bilde av et skap, en strekkode eller en enkelt vare – Claude
+   foreslår hva det er, og du retter før det legges inn. */
+var SAMPLE=null, SAMPLE_IMG=false, SAMPLE_TYPES="image/*";
+function initSample(){
+  if(!(window.claude&&window.claude.use))return;
+  try{
+    Promise.resolve(window.claude.use("sample")).then(function(sm){
+      if(!sm)return;
+      SAMPLE=sm;
+      return Promise.resolve(sm.limits()).then(function(l){
+        if(l&&l.images){
+          SAMPLE_IMG=true;
+          if(l.images.mediaTypes&&l.images.mediaTypes.length)SAMPLE_TYPES=l.images.mediaTypes.join(",");
+        }
+        render();
+      });
+    }).catch(noop);
+  }catch(e){}
+}
+/* Hvorfor et bilde ikke kan tolkes akkurat nå – tomt når det kan */
+function aiWhy(){
+  if(!(window.claude&&window.claude.use))
+    return "Forslag fra bilde virker bare når appen åpnes i Claude. Fyll ut selv.";
+  if(!SAMPLE)
+    return "Forslag fra bilde er ikke tilgjengelig her. Fyll ut selv.";
+  return "";
+}
+function pickFile(cb){
+  var inp=document.createElement("input");
+  inp.type="file";inp.accept=SAMPLE_TYPES;inp.style.cssText="position:fixed;left:-9999px";
+  document.body.appendChild(inp);
+  inp.onchange=function(){var f=inp.files&&inp.files[0];document.body.removeChild(inp);if(f)cb(f);};
+  inp.click();
+}
+function shrink(file,max,cb){
+  var u=URL.createObjectURL(file),img=new Image();
+  img.onload=function(){
+    var sc=Math.min(1,max/Math.max(img.width,img.height));
+    if(sc===1){URL.revokeObjectURL(u);return cb(file,u);}
+    var c=document.createElement("canvas");
+    c.width=Math.round(img.width*sc);c.height=Math.round(img.height*sc);
+    c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+    c.toBlob(function(b){cb(b||file,c.toDataURL("image/jpeg",.7));URL.revokeObjectURL(u);},"image/jpeg",.85);
+  };
+  img.onerror=function(){URL.revokeObjectURL(u);cb(file,"");};
+  img.src=u;
+}
+function scanError(code){
+  if(code==="not_granted")return "Du må gi appen lov til å bruke Claude for å lese bilder.";
+  if(code==="rate_limited")return "For mange forespørsler akkurat nå. Prøv igjen om litt.";
+  if(code==="image_rejected")return "Bildet ble ikke godtatt. Prøv et annet.";
+  if(code==="invalid_json")return "Fikk ikke tydelig svar. Prøv et nytt bilde.";
+  if(code==="cancelled")return "";
+  return "Klarte ikke å lese bildet. Prøv igjen.";
+}
+function photoScan(pid){
+  if(!SAMPLE||!SAMPLE_IMG)return toast("Bildegjenkjenning er ikke tilgjengelig her");
+  pickFile(function(file){ shrink(file,1600,function(blob,prev){ scanSheet(pid,blob,prev); }); });
+}
+function scanSheet(pid,blob,prev){
+  var p=place(pid),ctl=new AbortController(),found=[];
+  var h='<h2>Bilde fra '+esc(pName(p))+'</h2>'+
+    (prev?'<img class="photo" src="'+esc(prev)+'" alt="Bildet du valgte">':"")+
+    '<div id="sc-st"><p class="sub">Leser bildet …</p></div><div id="sc-rows"></div>'+
+    '<div class="sheetbtns"><button type="button" class="btn dark" id="sc-add" hidden>Legg til</button>'+
+    '<button type="button" class="btn" id="sc-cancel">Avbryt</button></div>';
+  openSheet(h,function(sh){
+    sh.querySelector("#sc-cancel").onclick=function(){ctl.abort();closeSheet();};
+    var prompt=
+      'Dette er et bilde tatt på en hytte, i rommet "'+pName(p)+'".\n'+
+      'Oppgave: list opp tingene på bildet som er verdt å ha i en varebeholdning for hytta.\n'+
+      'Viser bildet en strekkode, en produktetikett eller én enkelt vare, identifiser produktet så presist du kan.\n'+
+      'Bruk norske navn. Ikke ta med møbler, vegger, gulv, hyller eller ting som er en del av rommet.\n'+
+      'Svar med KUN en JSON-array, maks 12 objekter, slik:\n'+
+      '[{"navn":"Kaffe","kategori":"Mat","antall":2,"enhet":"poser"}]\n'+
+      'kategori må være en av: '+CATS.join(", ")+'.\n'+
+      'enhet må være en av: '+UNITS.join(", ")+'.\n'+
+      'antall er hvor mange du ser, minst 1. Finner du ingenting, svar med [].';
+    SAMPLE.json(prompt,{images:blob,modelTier:"default",signal:ctl.signal,cache:false})
+      .then(function(list){
+        if(!sheetEl)return;
+        found=(Array.isArray(list)?list:[]).slice(0,12).map(function(r){
+          var cat=CATS.indexOf(r&&r.kategori)>=0?r.kategori:(catsFor(p)[0]||"Annet");
+          var unit=UNITS.indexOf(r&&r.enhet)>=0?r.enhet:"stk";
+          return {name:String(r&&r.navn||"").trim(),cat:cat,unit:unit,
+                  qty:Math.max(1,parseInt(r&&r.antall,10)||1),on:true};
+        }).filter(function(r){return r.name;});
+        drawScan(sh,found,pid);
+      })
+      .catch(function(e){
+        if(!sheetEl)return;
+        var m=scanError(e&&e.code);
+        if(!m)return;
+        sh.querySelector("#sc-st").innerHTML='<p class="note">'+esc(m)+'</p>';
+      });
+  });
+}
+function drawScan(sh,found,pid){
+  var st=sh.querySelector("#sc-st"),box=sh.querySelector("#sc-rows"),add=sh.querySelector("#sc-add");
+  if(!found.length){
+    st.innerHTML='<p class="note">Fant ingenting å registrere i bildet.</p>';
+    return;
+  }
+  st.innerHTML='<p class="sub">Fant '+found.length+' ting. Rett opp det som er feil, og hak av det du vil ha med.</p>';
+  function paint(){
+    box.innerHTML='<ul class="rows">'+found.map(function(r,i){
+      return '<li class="row">'+
+        '<button type="button" class="star" data-sc="'+i+'" aria-pressed="'+r.on+'" aria-label="Ta med '+esc(r.name)+'">'+
+          '<span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span></button>'+
+        '<input class="nick" style="margin:0" type="text" data-sn="'+i+'" value="'+esc(r.name)+'" aria-label="Navn">'+
+        '<input class="nick" style="margin:0;width:62px;text-align:center" type="number" min="1" data-sq="'+i+'" value="'+r.qty+'" aria-label="Antall">'+
+      '</li>';
+    }).join("")+'</ul>';
+    box.querySelectorAll("[data-sc]").forEach(function(b){
+      b.onclick=function(){found[+b.dataset.sc].on=!found[+b.dataset.sc].on;paint();count();};
+    });
+    box.querySelectorAll("[data-sn]").forEach(function(i){i.oninput=function(){found[+i.dataset.sn].name=i.value;};});
+    box.querySelectorAll("[data-sq]").forEach(function(i){i.oninput=function(){found[+i.dataset.sq].qty=Math.max(1,parseInt(i.value,10)||1);};});
+  }
+  function count(){
+    var n=found.filter(function(r){return r.on&&r.name.trim();}).length;
+    add.textContent="Legg til "+n+" ting";add.hidden=false;add.disabled=!n;
+  }
+  paint();count();
+  add.onclick=function(){
+    var n=0;
+    found.forEach(function(r){
+      if(!r.on||!r.name.trim())return;
+      var it={id:uid(),name:r.name.trim(),cat:r.cat,placeId:pid,qty:r.qty,unit:r.unit,min:0,note:"",
+        fav:false,photoId:null,photo:null,updatedAt:Date.now()};
+      S.items.push(it);Store.save("items",it);n++;
+    });
+    closeSheet();render();toast(n+" ting lagt i "+placeName(pid));
+  };
+}
+
+/* ============================ Startsiden ============================
+   Hjem: hvor du er i turen, rommene dine og pakkelista. */
+function phaseStatus(){
+  var f=phase(),st=S.settings;
+  if(f==="plan"){
+    var n=S.list.length,p=packedCount();
+    return n?(n+' ting på lista · '+p+' pakket ned'):'Lista er tom – legg til det du trenger';
+  }
+  if(f==="pavei")return packedCount()+' av '+S.list.length+' pakket · klar til utpakking';
+  if(f==="pakkut"){
+    var igjen=S.list.filter(function(l){return !l.carry;}).length;
+    return igjen?igjen+' ting igjen å pakke ut':'Alt er pakket ut';
+  }
+  if(f==="utpakket")return 'Klar for kontroll før avreise';
+  var d=(st.roundDone||[]).length;
+  return d+' av '+(S.places.length+1)+' gjennomgått';
+}
+function viewHome(){
+  var st=S.settings;
+  var h='<section class="screen" style="padding-top:18px">'+
+    '<button type="button" class="homesearch" data-a="gosearch">'+
+      '<span>Søk etter en ting</span>'+
+      '<i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i>'+
+    '</button>'+
+    '<button type="button" class="hero" data-a="gostep">'+
+      '<h1>'+esc(phaseDef().title)+'</h1>'+
+      '<span class="hero-sub">'+esc(phaseStatus())+'</span>'+
+      '<span class="hero-go" aria-hidden="true">→</span>'+
+    '</button>'+
+    '<div class="tiles">'+
+      '<button type="button" data-a="gorooms"><span class="t-n">Mine rom</span>'+
+        '<span class="t-c num">'+S.places.length+' rom · '+S.items.length+' ting</span></button>'+
+      '<button type="button" data-a="golist"><span class="t-n">Pakkeliste</span>'+
+        '<span class="t-c num">'+(S.list.length?S.list.length+' ting':'tom')+'</span></button>'+
+    '</div>'+
+    '<button type="button" class="quietrow" data-a="goved">Ved<span>'+esc(woodLabel())+'</span></button>'+
+    syncLine()+'</section>';
+  return {html:h,bar:""};
+}
+
 /* ======================= Turen, fase for fase =======================
    Syklus: Planlegg → På vei → Pakk ut → (frivillig) Kontroll → Planlegg */
 function viewStep(){
+  if(LOADING&&!S.settings.onboarded)
+    return {html:'<section class="screen"><h1>Henter<br>hytta di</h1>'+
+      '<p class="lede">Ser etter om du har satt opp en hytte fra før …</p></section>',bar:""};
   if(!S.settings.onboarded)return viewSetup();
   var f=phase();
   if(f==="plan")return viewPlan();
@@ -758,37 +1121,48 @@ function where(){
 
 /* --- Planlegg neste tur ------------------------------------------------ */
 function packedCount(){return S.list.filter(function(l){return l.packed;}).length;}
+/* Vanlige hytteting å falle tilbake på når hytta di ikke gir nok forslag */
+var COMMON=[["Melk","Mat"],["Brød","Mat"],["Kaffe","Drikke"],["Toalettpapir","Forbruksvarer"],
+  ["Ved","Ved"],["Tennbriketter","Ved"],["Fyrstikker","Forbruksvarer"],["Smør","Mat"],
+  ["Egg","Mat"],["Pålegg","Mat"],["Poteter","Mat"],["Pasta","Mat"],["Drikkevann","Drikke"],
+  ["Oppvasksåpe","Forbruksvarer"],["Tørkerull","Forbruksvarer"],["Søppelsekker","Forbruksvarer"],
+  ["Batterier","Utstyr"],["Kaffefilter","Forbruksvarer"],["Salt og pepper","Mat"],["Ull-undertøy","Klær"]];
+/* Forslagene står hele tiden. Velger du ett, faller det ut og neste
+   alternativ tar plassen – lavt først, så favoritter, så vanlige ting. */
 function suggestions(){
-  /* Hjelp i gang: det som er lavt, favoritter, ellers noen vanlige varer */
   var have={};S.list.forEach(function(l){have[l.text.toLowerCase()]=1;});
-  var out=[];
-  S.items.filter(isLow).sort(function(a,b){return (a.qty-a.min)-(b.qty-b.min);}).forEach(function(i){
-    if(!have[i.name.toLowerCase()]&&out.length<5)out.push(i.name);
-  });
-  S.items.filter(function(i){return i.fav;}).forEach(function(i){
-    if(!have[i.name.toLowerCase()]&&out.indexOf(i.name)<0&&out.length<7)out.push(i.name);
-  });
-  ["Melk","Brød","Kaffe","Toalettpapir","Ved"].forEach(function(n){
-    if(!have[n.toLowerCase()]&&out.indexOf(n)<0&&out.length<7)out.push(n);
-  });
+  var out=[],seen={};
+  function add(name,cat,unit){
+    var k=String(name||"").trim();if(!k)return;
+    var lk=k.toLowerCase();
+    if(have[lk]||seen[lk]||out.length>=6)return;
+    seen[lk]=1;out.push({name:k,cat:cat||"Annet",unit:unit||"stk"});
+  }
+  S.items.filter(isLow).sort(function(a,b){return (a.qty-a.min)-(b.qty-b.min);})
+    .forEach(function(i){add(i.name,i.cat,i.unit);});
+  S.items.filter(function(i){return i.fav;}).forEach(function(i){add(i.name,i.cat,i.unit);});
+  COMMON.forEach(function(c){add(c[0],c[1],"stk");});
+  S.items.slice().sort(function(a,b){return (b.updatedAt||0)-(a.updatedAt||0);})
+    .forEach(function(i){add(i.name,i.cat,i.unit);});
   return out;
 }
 function viewPlan(){
   var lowWood=S.settings.wood==="lite"||S.settings.wood==="tom";  /* halvfullt varsler ikke */
   var n=S.list.length,p=packedCount();
-  var h=phaseHeader()+'<section class="screen">'+where()+'<h1>Planlegg<br>neste tur</h1>'+
+  var h=phaseHeader()+'<section class="screen">'+'<h1>Planlegg<br>neste tur</h1>'+
     '<p class="lede">'+(n?'Kryss av det du har pakket ned. '+p+' av '+n+' er klart.'
-                        :'Lista er tom. Skriv inn det du trenger – eller trykk på et forslag.')+'</p>';
+                        :'Lista er tom. Legg til det du trenger – eller trykk på et forslag.')+'</p>';
   if(lowWood)h+='<p class="note">'+esc(woodLabel())+' i vedskjulet – husk ved.</p>';
-  h+='<form class="addline" id="addform"><input type="text" id="addinput" placeholder="Hva trenger du?" aria-label="Legg til på lista" autocomplete="off"><button type="submit">Legg til</button></form>';
-  if(!n){
-    var sug=suggestions();
-    if(sug.length){
-      h+=groupLabel("Forslag")+'<div class="sugg">';
-      sug.forEach(function(s){h+='<button type="button" data-a="sugadd" data-s="'+esc(s)+'">+ '+esc(s)+'</button>';});
-      h+='</div>';
-    }
-  }else{
+  h+='<div class="addwrap"><button type="button" class="btn" data-a="newline">+ Legg til på lista</button></div>';
+  var sug=suggestions();
+  if(sug.length){
+    h+=groupLabel("Forslag")+'<div class="sugg">';
+    sug.forEach(function(s){
+      h+='<button type="button" data-a="sugadd" data-s="'+esc(s.name)+'" data-c="'+esc(s.cat)+'" data-u="'+esc(s.unit)+'">+ '+esc(s.name)+'</button>';
+    });
+    h+='</div>';
+  }
+  if(n){
     var rows=S.list.slice().sort(function(a,b){return (a.order||0)-(b.order||0);});
     h+='<p class="legend">Huk av når tingen ligger i bilen.</p><ul class="rows">';
     rows.forEach(function(l){h+=listRow(l,"packed");});
@@ -798,8 +1172,9 @@ function viewPlan(){
     bar:'<button type="button" class="btn dark" data-a="leave">Klar for å dra</button>'};
 }
 function listRow(l,flagKey){
-  var on=!!l[flagKey];
+  var on=!!l[flagKey],src=photoSrc(l);
   return '<li class="row'+(l.carry?' carry':'')+'">'+
+    (src?'<img class="thumb" src="'+esc(src)+'" alt="">':"")+
     '<button type="button" class="check" aria-pressed="'+on+'" data-a="'+(flagKey==="packed"?"packtoggle":"placetoggle")+'" data-id="'+l.id+'" data-fk="c'+l.id+'">'+
       '<span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span>'+
       '<span class="check-txt">'+esc(l.text)+'</span>'+
@@ -808,24 +1183,13 @@ function listRow(l,flagKey){
     '<button type="button" class="rowmore" data-a="editline" data-id="'+l.id+'" aria-label="Endre '+esc(l.text)+'">•••</button></li>';
 }
 
-/* Tre piktogrammer, ett per skjerm */
-function illuSun(){
-  return '<svg class=\"illu\" viewBox=\"0 0 200 164\" role=\"img\" aria-label=\"Sol og skyer over fjellet\"><g class=\"f\"><rect x=\"20\" y=\"23\" width=\"108\" height=\"9\"/><path d=\"M26 23 a26 26 0 0 1 52 0 z\"/><path d=\"M83 23 a15 15 0 0 1 30 0 z\"/><rect x=\"92\" y=\"70\" width=\"88\" height=\"9\"/><path d=\"M100 70 a22 22 0 0 1 44 0 z\"/><path d=\"M145 70 a13 13 0 0 1 26 0 z\"/><path d=\"M14 150 58 112l16 14 38-42 74 66z\"/></g><circle class=\"s\" cx=\"48\" cy=\"84\" r=\"24\"/></svg>';
-}
-function illuTrip(){
-  return '<svg class=\"illu\" viewBox=\"0 0 200 164\" role=\"img\" aria-label=\"Fjelltur med stige\"><g class=\"f\"><rect x=\"16\" y=\"26\" width=\"152\" height=\"9\"/><path d=\"M24 26 a24 24 0 0 1 48 0 z\"/><path d=\"M76 26 a14 14 0 0 1 28 0 z\"/><path d=\"M105 26 a11 11 0 0 1 22 0 z\"/><rect x=\"16\" y=\"52\" width=\"152\" height=\"9\"/><path d=\"M118 52 a14 14 0 0 1 28 0 z\"/><path d=\"M147 52 a11 11 0 0 1 22 0 z\"/><path d=\"M104 152 148 76l44 76z\"/><path d=\"M62 152 104 88l42 64z\"/></g><path class=\"s2\" d=\"M14 152 56 88l42 64z\"/><g class=\"f\"><rect x=\"32\" y=\"138\" width=\"20\" height=\"7\"/><rect x=\"39\" y=\"128\" width=\"20\" height=\"7\"/><rect x=\"45\" y=\"118\" width=\"20\" height=\"7\"/><rect x=\"51\" y=\"108\" width=\"12\" height=\"7\"/></g></svg>';
-}
 
-function illuForest(){
-  return '<svg class="illu" viewBox="0 0 200 164" role="img" aria-label="Furuskog"><g class="f"><path d="M46 14 26 46h40z"/><path d="M46 34 18 82h56z"/><rect x="38" y="80" width="16" height="40"/><path d="M154 14 134 46h40z"/><path d="M154 34 126 82h56z"/><rect x="146" y="80" width="16" height="40"/><path d="M100 22 76 62h48z"/><path d="M100 70 82 96h36z"/><path d="M100 88 74 128h52z"/><rect x="93" y="126" width="14" height="28"/><path d="M40 122 18 154h44z"/><path d="M160 122 138 154h44z"/></g></svg>';
-}
 
 /* --- På vei ------------------------------------------------------------ */
 function viewPavei(){
   var n=S.list.length,p=packedCount();
   return {
-    html:phaseHeader()+'<section class="screen">'+where()+'<h1>På vei<br>til hytta</h1>'+
-      illuTrip()+
+    html:phaseHeader()+'<section class="screen">'+'<h1>På vei<br>til hytta</h1>'+
       '<p class="lede">'+(n?p+' av '+n+' ting er krysset av som pakket.':'Ingenting på lista denne gangen.')+
       ' Du kan gå tilbake og rette opp, eller starte utpakkingen når du er framme.</p></section>',
     bar:'<button type="button" class="btn dark" data-a="startunpack">Start utpakkingen</button>'+
@@ -843,14 +1207,16 @@ function matchItem(l){
 function viewUnpack(){
   var open=S.list.filter(function(l){return !l.carry;});
   var carried=S.list.filter(function(l){return l.carry;});
-  var h=phaseHeader()+'<section class="screen">'+where()+'<h1>Pakk ut</h1>'+
+  var h=phaseHeader()+'<section class="screen">'+'<h1>Pakk ut</h1>'+
     '<p class="lede">'+(open.length?'Gå gjennom det du hadde med deg.'
       :'Ingenting igjen å pakke ut.')+'</p>';
   if(open.length){
     h+='<p class="legend">Huk av når tingen er satt på plass – da legges den i rommet sitt og går ut av lista. «Ta videre» betyr at den ikke ble med.</p><ul class="rows">';
     open.forEach(function(l){
       var it=matchItem(l);
+      var psrc=photoSrc(l);
       h+='<li class="row">'+
+        (psrc?'<img class="thumb" src="'+esc(psrc)+'" alt="">':"")+
         '<button type="button" class="check" data-a="place" data-id="'+l.id+'" data-fk="p'+l.id+'" aria-pressed="false">'+
           '<span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span>'+
           '<span><span class="check-txt">'+esc(l.text)+'</span>'+
@@ -877,8 +1243,7 @@ function viewUnpack(){
 function viewUtpakket(){
   var low=S.items.filter(isLow).length;
   return {
-    html:phaseHeader()+'<section class="screen">'+where()+'<h1>Du har<br>pakket ut</h1>'+
-      illuForest()+
+    html:phaseHeader()+'<section class="screen">'+'<h1>Du har<br>pakket ut</h1>'+
       '<p class="lede">Alt er på plass. Vil du gå gjennom rommene og kontrollere beholdningen? Det er frivillig – men da lager lista til neste tur seg nesten selv.'+
       (low?' '+low+' ting ligger allerede under minimum.':"")+'</p></section>',
     bar:'<button type="button" class="btn primary" data-a="startround">Kontroller beholdningen</button>'+
@@ -892,7 +1257,7 @@ function viewRound(){
   if(roundOpen)return roundRoom(roundOpen);
   var done=S.settings.roundDone||[],total=S.places.length+1;
   var n=done.length;
-  var h=phaseHeader()+'<section class="screen">'+where()+'<h1>Kontroller<br>beholdningen</h1>'+
+  var h=phaseHeader()+'<section class="screen">'+'<h1>Kontroller<br>beholdningen</h1>'+
     '<p class="lede">Velg rommene du vil gå gjennom – du bestemmer rekkefølgen. Det som havner under minimum, går rett på lista til neste tur.'+
     (n?' '+n+' av '+total+' er gjennomgått.':'')+'</p><ul class="navlist">';
   S.places.forEach(function(p){
@@ -924,7 +1289,8 @@ function roundRoom(pid){
   return {html:h,
     bar:'<div class="barrow">'+
       '<button type="button" class="btn primary" data-a="addhere" data-p="'+p.id+'">+ Legg til</button>'+
-      '<button type="button" class="btn dark" data-a="roomdone" data-id="'+p.id+'">'+(ok?'Tilbake':'Ferdig med rommet')+'</button></div>'};
+      '<button type="button" class="btn dark" data-a="roomdone" data-id="'+p.id+'">'+(ok?'Tilbake':'Ferdig med rommet')+'</button></div>'+
+      (SAMPLE_IMG?'<button type="button" class="quiet" data-a="scan" data-p="'+p.id+'">Legg til fra bilde</button>':"")};
 }
 function roundWood(){
   return {
@@ -936,7 +1302,8 @@ function roundWood(){
 /* ========================= Søk og oversikt ========================= */
 function backLink(){return "";}
 function backBar(){
-  return '<button type="button" class="btn" data-a="closebrowse">Tilbake til «'+esc(phaseDef().title)+'»</button>';
+  var to=(returnTo==="home")?"Hytta":"«"+phaseDef().title+"»";
+  return '<button type="button" class="btn" data-a="closebrowse">Tilbake til '+esc(to)+'</button>';
 }
 function viewBrowse(){
   if(browse.view==="brukere")return {html:usersScreen(),bar:backBar()};
@@ -1057,7 +1424,8 @@ function roomScreen(head){
     '<h1 style="margin-top:8px">'+esc(pName(p))+'</h1>'+
     '<p class="sub">'+(p.nick?esc(p.type)+' · ':"")+itemsIn(p.id).length+' ting</p><div style="height:22px"></div>'+roomRows(p);
   return {html:h+'</section>',
-    bar:'<button type="button" class="btn primary" data-a="addhere" data-p="'+p.id+'">+ Legg til i '+esc(pName(p))+'</button>'};
+    bar:'<button type="button" class="btn primary" data-a="addhere" data-p="'+p.id+'">+ Legg til i '+esc(pName(p))+'</button>'+
+      (SAMPLE_IMG?'<button type="button" class="quiet" data-a="scan" data-p="'+p.id+'">Legg til fra bilde</button>':"")};
 }
 /* Kategori på tvers av rom – like ting slås sammen til én total */
 function catScreen(head){
@@ -1127,16 +1495,19 @@ function goPhase(f){
 }
 function putIn(listId,placeId){
   var l=byId(S.list,listId);if(!l)return;
-  var n=parseInt(String(l.qty||"").replace(/[^0-9]/g,""),10);if(!n||n<1)n=1;
+  var n=parseInt(l.num,10);
+  if(!n||n<1)n=parseInt(String(l.qty||"").replace(/[^0-9]/g,""),10);
+  if(!n||n<1)n=1;
   var it=matchItem(l),msg;
   if(it){
     it.qty=(Number(it.qty)||0)+n;it.placeId=placeId;touch(it);
+    if(!it.photoId&&!it.photo&&(l.photoId||l.photo)){it.photoId=l.photoId||null;it.photo=l.photo||null;}
     msg=it.name+": "+it.qty+" "+(it.unit||"")+" i "+placeName(placeId);
   }else{
-    var unit=String(l.qty||"").replace(/[0-9\s]/g,"")||"stk";
+    var unit=l.unit||String(l.qty||"").replace(/[0-9\s]/g,"")||"stk";
     var p=place(placeId);
-    it={id:uid(),name:l.text,cat:(catsFor(p)[0]||"Annet"),placeId:placeId,qty:n,unit:unit,min:0,note:"",
-        fav:false,photoId:null,photo:null,updatedAt:Date.now()};
+    it={id:uid(),name:l.text,cat:l.cat||(catsFor(p)[0]||"Annet"),placeId:placeId,qty:n,unit:unit,min:0,note:"",
+        fav:false,photoId:l.photoId||null,photo:l.photo||null,updatedAt:Date.now()};
     S.items.push(it);Store.save("items",it);
     msg=it.name+" er registrert i "+placeName(placeId);
   }
@@ -1184,7 +1555,7 @@ function toast(msg,label,fn){
 }
 
 /* ============================== Bunnark ============================== */
-var sheetEl=null,lastFocus=null;
+var sheetEl=null,lastFocus=null,sheetGen=0;
 function openSheet(html,setup){
   closeSheet(true);
   lastFocus=document.activeElement;
@@ -1211,10 +1582,12 @@ function closeSheet(instant){
   var root=document.getElementById("sheetroot");
   if(!root.innerHTML)return;
   document.body.style.overflow="";
+  sheetGen++;
   if(instant){root.innerHTML="";sheetEl=null;return;}
   var sh=document.getElementById("sh"),bd=document.getElementById("bd");
   if(sh)sh.classList.remove("on");if(bd)bd.classList.remove("on");
-  setTimeout(function(){root.innerHTML="";},200);
+  var g=sheetGen;
+  setTimeout(function(){if(g===sheetGen)root.innerHTML="";},200);
   sheetEl=null;
   if(lastFocus&&document.contains(lastFocus))lastFocus.focus();
 }
@@ -1232,11 +1605,12 @@ function itemSheet(item,presetPlace,presetName,lockPlace){
   var p=place(pid),cats=catsFor(p);
   var d=item?Object.assign({},item):{id:uid(),name:presetName||"",cat:cats[0]||"Annet",
     placeId:pid,qty:1,unit:"stk",min:0,note:"",fav:false,photoId:null,photo:null};
-  var pic={photoId:d.photoId||null,photo:d.photo||null};
+  var pic={photoId:d.photoId||null,photo:d.photo||null,blob:null};
   var names={};S.items.forEach(function(i){names[i.name]=1;});
   var h='<h2>'+(isNew?(lockPlace?"Legg til i "+esc(pName(p)):"Registrer noe nytt"):esc(d.name))+'</h2>'+
     (!isNew&&d.updatedAt?'<p class="sub" style="margin:-12px 0 16px">Sist endret '+esc(when(d.updatedAt))+
       (d.by&&d.by!==MEID?' av '+esc(nameOf(d.by)):"")+'</p>':"")+
+    '<div class="field"><span class="flabel">Bilde</span><div class="photo-row" id="f-pic"></div><p class="sub" id="f-pstat" hidden></p></div>'+
     '<div class="field"><label for="f-name">Navn</label><input type="text" id="f-name" list="nl" value="'+esc(d.name)+'" placeholder="F.eks. Kaffe" autocomplete="off">'+
       '<datalist id="nl">'+Object.keys(names).map(function(n){return '<option value="'+esc(n)+'"></option>';}).join("")+'</datalist></div>'+
     '<div class="field"><span class="flabel">Antall</span><div class="qtyrow">'+
@@ -1245,7 +1619,6 @@ function itemSheet(item,presetPlace,presetName,lockPlace){
       '<div class="stepper"><button type="button" id="f-p" aria-label="Flere">+</button></div></div></div>'+
     '<div class="field"><span class="flabel">Kategori</span>'+chips("cat",cats,d.cat)+'</div>'+
     (lockPlace?"":'<div class="field"><span class="flabel">Rom</span>'+chips("placeId",S.places,d.placeId,function(x){return pName(x);})+'</div>')+
-    '<div class="field"><span class="flabel">Bilde</span><div class="photo-row" id="f-pic"></div></div>'+
     '<button type="button" class="more" id="f-more" aria-expanded="false">Flere felt</button>'+
     '<div id="f-x" hidden>'+
       '<div class="field"><span class="flabel">Enhet</span>'+chips("unit",UNITS,d.unit)+'</div>'+
@@ -1272,13 +1645,66 @@ function itemSheet(item,presetPlace,presetName,lockPlace){
     function drawPic(){
       var box=sh.querySelector("#f-pic"),src=photoSrc(pic);
       box.innerHTML=(src?'<img class="photo-prev" src="'+esc(src)+'" alt="Valgt bilde">':"")+
-        '<button type="button" class="mini" id="pa">'+(src?"Bytt bilde":"Legg til bilde")+'</button>'+
-        (src?'<button type="button" class="mini" id="pd">Fjern</button>':"");
-      box.querySelector("#pa").onclick=function(){
-        pickPhoto(function(r){if(pic.photoId&&pic.photoId!==r.photoId)dropPhoto(pic.photoId);pic.photoId=r.photoId;pic.photo=r.photo;drawPic();});
-      };
+        '<div class="picbtns">'+
+          '<button type="button" class="mini" id="pc">'+(src?"Nytt bilde":"Ta bilde")+'</button>'+
+          '<button type="button" class="mini" id="pa">Velg bilde</button>'+
+          (src?'<button type="button" class="mini" id="pd">Fjern</button>':"")+
+          (src?'<button type="button" class="mini" id="pi">Foreslå utfylling</button>':"")+
+        '</div>';
+      function took(r){
+        if(pic.photoId&&pic.photoId!==r.photoId)dropPhoto(pic.photoId);
+        pic.photoId=r.photoId;pic.photo=r.photo;pic.blob=r.blob||null;
+        drawPic();
+        identify();
+      }
+      box.querySelector("#pc").onclick=function(){pickPhoto(took,true);};
+      box.querySelector("#pa").onclick=function(){pickPhoto(took,false);};
       var pd=box.querySelector("#pd");
-      if(pd)pd.onclick=function(){dropPhoto(pic.photoId);pic.photoId=null;pic.photo=null;drawPic();};
+      if(pd)pd.onclick=function(){dropPhoto(pic.photoId);pic.photoId=null;pic.photo=null;pic.blob=null;drawPic();};
+      var pi=box.querySelector("#pi");
+      if(pi)pi.onclick=identify;
+    }
+    /* Foreslår navn, kategori og enhet ut fra bildet – alt kan rettes */
+    function identify(){
+      var stat=sh.querySelector("#f-pstat");
+      function say(t){if(!stat)return;stat.hidden=!t;stat.textContent=t||"";}
+      if(!pic.blob)return say("Ta eller velg bildet på nytt for å få forslag.");
+      var why=aiWhy();
+      if(why)return say(why);
+      say("Leser bildet …");
+      var pl=place(lockPlace?pid:(pick.placeId||d.placeId));
+      SAMPLE.json('Bildet viser én ting som skal registreres i en hytte'+(pl?', i rommet "'+pName(pl)+'"':"")+'.\n'+
+        'Er det en strekkode eller produktetikett, identifiser produktet.\n'+
+        'Svar med KUN ett JSON-objekt: {"navn":"Kaffe","kategori":"Mat","enhet":"poser","antall":2}\n'+
+        'kategori må være en av: '+CATS.join(", ")+'.\nenhet må være en av: '+UNITS.join(", ")+'.\n'+
+        'Bruk norsk navn. Antall er hvor mange du ser, minst 1.',
+        {images:pic.blob,modelTier:"default",cache:false})
+      .then(function(r){
+        if(!sheetEl)return;
+        say("");
+        if(!r)return;
+        var nm=sh.querySelector("#f-name"),tok=[];
+        if(r.navn&&nm&&!nm.value.trim()){nm.value=String(r.navn).slice(0,60);tok.push("navn");}
+        if(UNITS.indexOf(r.enhet)>=0){pick.unit=r.enhet;markChips("unit",r.enhet);tok.push("enhet");}
+        if(CATS.indexOf(r.kategori)>=0){pick.cat=r.kategori;markChips("cat",r.kategori);tok.push("kategori");}
+        var q2=sh.querySelector("#f-q"),n2=parseInt(r.antall,10);
+        if(q2&&n2>0){q2.value=n2;tok.push("antall");}
+        if(r.navn)say("Forslag fra bildet: "+String(r.navn).slice(0,40)+" – rett hvis det er feil");
+        else if(!tok.length)say("Fant ingenting sikkert i bildet – fyll ut selv.");
+        if(tok.length)toast("Fylte ut "+tok.join(", ")+" fra bildet");
+      })
+      .catch(function(e){
+        var c=e&&e.code;
+        var m=(c==="images_unavailable")
+          ?"Denne viseren kan ikke sende bilder til Claude. Fyll ut selv."
+          :scanError(c);
+        say(m||"");
+        if(m&&c!=="images_unavailable")toast(m);
+      });
+    }
+    function markChips(k,v){
+      var g=sh.querySelector('[data-chips="'+k+'"]');
+      if(g)g.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.val===v));});
     }
     drawPic();
     var q=sh.querySelector("#f-q");
@@ -1321,7 +1747,9 @@ function itemSheet(item,presetPlace,presetName,lockPlace){
       sh.querySelector("#a-l").onclick=function(){
         var ex=byId(S.items,d.id);
         if(S.list.some(function(l){return l.itemId===ex.id;})){closeSheet();return toast("Står allerede på lista");}
-        var e={id:uid(),text:ex.name,qty:"",packed:false,carry:nextTripList(),itemId:ex.id,order:Date.now()};
+        var e={id:uid(),text:ex.name,qty:"",num:1,unit:ex.unit||"stk",cat:ex.cat||"Annet",
+               packed:false,carry:nextTripList(),itemId:ex.id,order:Date.now(),
+               photoId:ex.photoId||null,photo:ex.photo||null};
         S.list.push(e);Store.save("list",e);closeSheet();render();toast(ex.name+" satt på lista");
       };
     }
@@ -1367,13 +1795,51 @@ function nextTripList(){
   var f=phase();
   return S.settings.onboarded&&(f==="pakkut"||f==="utpakket"||f==="kontroll");
 }
+
+
+/* Sikkerhetskopi: flytt hytta mellom nettlesere og versjoner */
+function backupSheet(){
+  var data=JSON.stringify({places:S.places,items:S.items,list:S.list,settings:S.settings});
+  var h='<h2>Sikkerhetskopi</h2>'+
+    '<p class="sub" style="margin:-12px 0 16px">Kopier teksten og ta vare på den. Åpner du appen et annet sted, limer du den inn her og trykker Hent inn.</p>'+
+    '<div class="field"><label for="bk">Dataene dine</label><textarea id="bk" style="min-height:130px;font-family:var(--mono);font-size:.75rem">'+esc(data)+'</textarea></div>'+
+    '<div class="sheetbtns"><button type="button" class="btn primary" id="bk-copy" style="flex:2">Kopier</button>'+
+    '<button type="button" class="btn" id="bk-in" style="flex:1">Hent inn</button></div>';
+  openSheet(h,function(sh){
+    sh.querySelector("#bk-copy").onclick=function(){
+      var t=sh.querySelector("#bk");t.select();
+      try{
+        if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t.value);
+        else document.execCommand("copy");
+        toast("Kopiert");
+      }catch(e){toast("Marker teksten og kopier selv");}
+    };
+    sh.querySelector("#bk-in").onclick=function(){
+      var raw=sh.querySelector("#bk").value.trim(),o;
+      try{o=JSON.parse(raw);}catch(e){return toast("Teksten kunne ikke leses");}
+      if(!o||!Array.isArray(o.places))return toast("Fant ingen hytte i teksten");
+      S.places=o.places||[];S.items=o.items||[];S.list=o.list||[];
+      S.settings=normSettings(o.settings);
+      sortPlaces();Cache.write(S);
+      if(db){
+        S.places.forEach(function(p){Store.save("places",p);});
+        S.items.forEach(function(i){Store.save("items",i);});
+        S.list.forEach(function(l){Store.save("list",l);});
+        Store.saveMeta();
+      }
+      closeSheet();screen=S.settings.onboarded?"home":"step";render();
+      toast("Hytta er hentet inn");
+    };
+  });
+}
+
 /* Lista er alltid ett trykk unna, uansett hvor i turen du er */
 function listSheet(){
   openSheet('<h2>Lista til neste tur</h2>'+
     '<p class="sub" style="margin:-12px 0 16px">'+(nextTripList()
       ?'Du er på hytta, så dette går på lista til <b>neste</b> tur – ikke på det du pakker ut nå.'
-      :'Kom du på noe? Skriv det inn her, så ligger det klart når du pakker.')+'</p>'+
-    '<form class="addline" id="qform"><input type="text" id="qadd" placeholder="Hva må med?" aria-label="Legg til på lista" autocomplete="off"><button type="submit">Legg til</button></form>'+
+      :'Kom du på noe? Legg det inn her, så ligger det klart når du pakker.')+'</p>'+
+    '<div class="addwrap"><button type="button" class="btn" id="qnew">+ Legg til på lista</button></div>'+
     '<div id="qlist"></div>',
   function(sh){
     function paint(){
@@ -1389,17 +1855,7 @@ function listSheet(){
       });
     }
     paint();
-    sh.querySelector("#qform").onsubmit=function(e){
-      e.preventDefault();
-      var i=sh.querySelector("#qadd"),v=i.value.trim();
-      if(!v)return;
-      var ex=null;S.items.forEach(function(x){if(!ex&&x.name.toLowerCase()===v.toLowerCase())ex=x;});
-      var entry={id:uid(),text:v,qty:"",packed:false,carry:nextTripList(),order:Date.now()};
-      if(ex)entry.itemId=ex.id;
-      S.list.push(entry);Store.save("list",entry);
-      i.value="";paint();render();i.focus();
-    };
-    var qa=sh.querySelector("#qadd");if(qa)qa.focus();
+    sh.querySelector("#qnew").onclick=function(){closeSheet();lineSheet(null,listSheet);};
   });
 }
 /* Nullstilling – nyttig i brukertest, og eneste vei tilbake til oppsettet */
@@ -1437,6 +1893,8 @@ function menuSheet(){
   var st=S.settings;
   var h='<h2>Meny</h2>'+
     '<p class="sub" style="margin:-10px 0 16px">Nå: '+esc(phaseDef().title)+'</p>'+
+    '<button type="button" class="themerow" data-m="theme">Mørk modus'+
+      '<span class="st">'+(themeIsDark()?"På":"Av")+' <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.2 8.2 0 0 1 9.6 4 8.3 8.3 0 1 0 20 14.5z"/></svg></span></button>'+
     '<div class="actions" style="margin-top:0">'+
       '<button type="button" data-m="lista">Lista til neste tur<span class="hint">'+S.list.length+' ting</span></button>'+
       '<button type="button" data-m="ved">Ved<span class="hint">'+esc(woodLabel())+'</span></button>'+
@@ -1444,6 +1902,7 @@ function menuSheet(){
       '<button type="button" data-m="kat">Kategorier på tvers<span class="hint">totaler uavhengig av rom</span></button>'+
       '<button type="button" data-m="hytte">Rediger hytta<span class="hint">legg til eller endre rom</span></button>'+
       (USERCAP||!userTried?'<button type="button" data-m="brukere">Brukere og tilgang</button>':"")+
+      '<button type="button" data-m="backup">Sikkerhetskopi<span class="hint">flytt hytta til en annen telefon</span></button>'+
       /* Bare eieren kan nullstille – testere skal ikke kunne slette hytta */
       ((MEROLE===""||MEROLE==="Eier")?'<button type="button" data-m="nullstill" class="danger">Start på nytt<span class="hint">sletter alt og kjører oppsettet</span></button>':"")+
     '</div>';
@@ -1451,9 +1910,12 @@ function menuSheet(){
     sh.querySelectorAll("[data-m]").forEach(function(b){
       b.onclick=function(){
         var m=b.dataset.m;
-        closeSheet();
+        closeSheet(m==="theme");
+        if(m==="theme"){themeSet(themeIsDark()?"light":"dark");setTimeout(menuSheet,60);return;}
         if(m==="lista"){setTimeout(listSheet,220);return;}
+        if(m==="backup"){setTimeout(backupSheet,220);return;}
         if(m==="nullstill"){setTimeout(resetSheet,220);return;}
+        returnTo=(screen==="home"?"home":"step");
         screen="browse";browse.place=null;browse.cat=null;query="";
         browse.view=m;
         window.scrollTo(0,0);render();
@@ -1465,31 +1927,160 @@ function woodLabel(){
   for(var i=0;i<WOOD.length;i++)if(WOOD[i].key===S.settings.wood)return WOOD[i].label;
   return "";
 }
-function lineSheet(l){
-  var h='<h2>'+esc(l.text)+'</h2>'+
-    '<div class="field"><label for="l-t">Tekst</label><input type="text" id="l-t" value="'+esc(l.text)+'"></div>'+
-    '<div class="field"><label for="l-q">Mengde</label><input type="text" id="l-q" value="'+esc(l.qty||"")+'" placeholder="F.eks. 2 poser"></div>'+
-    '<div class="sheetbtns"><button type="button" class="btn primary" id="l-s" style="flex:2">Lagre</button>'+
-    '<button type="button" class="btn danger" id="l-d" style="flex:1">Fjern</button></div>';
+/* Legg til / endre noe på pakkelista. Samme skjema som når du registrerer
+   noe i et rom – men uten rom: det velger du når du pakker ut. */
+function lineSheet(l,after){
+  var isNew=!l;
+  var d=l?Object.assign({},l):{id:uid(),text:"",cat:"Annet",unit:"stk",num:1,photoId:null,photo:null};
+  var n0=parseInt(d.num,10);
+  if(!n0||n0<1)n0=parseInt(String(d.qty||"").replace(/[^0-9]/g,""),10)||1;
+  var u0=d.unit||String(d.qty||"").replace(/[0-9\s]/g,"")||"stk";
+  if(UNITS.indexOf(u0)<0)u0="stk";
+  var pic={photoId:d.photoId||null,photo:d.photo||null,blob:null};
+  var names={};S.items.forEach(function(i){names[i.name]=1;});
+  var h='<h2>'+(isNew?"Legg til på lista":esc(d.text))+'</h2>'+
+    '<p class="sub" style="margin:-12px 0 16px">Rommet velger du når du pakker ut.</p>'+
+    '<div class="field"><span class="flabel">Bilde</span><div class="photo-row" id="f-pic"></div><p class="sub" id="f-pstat" hidden></p></div>'+
+    '<div class="field"><label for="f-name">Navn</label><input type="text" id="f-name" list="ll" value="'+esc(d.text)+'" placeholder="F.eks. Kaffe" autocomplete="off">'+
+      '<datalist id="ll">'+Object.keys(names).map(function(nm){return '<option value="'+esc(nm)+'"></option>';}).join("")+'</datalist></div>'+
+    '<div class="field"><span class="flabel">Antall</span><div class="qtyrow">'+
+      '<div class="stepper"><button type="button" id="f-m" aria-label="Færre">−</button></div>'+
+      '<input type="number" id="f-q" inputmode="numeric" min="1" step="1" value="'+n0+'" aria-label="Antall">'+
+      '<div class="stepper"><button type="button" id="f-p" aria-label="Flere">+</button></div></div></div>'+
+    '<div class="field"><span class="flabel">Kategori</span>'+chips("cat",CATS,d.cat||"Annet")+'</div>'+
+    '<button type="button" class="more" id="f-more" aria-expanded="false">Flere felt</button>'+
+    '<div id="f-x" hidden><div class="field"><span class="flabel">Enhet</span>'+chips("unit",UNITS,u0)+'</div></div>'+
+    '<div class="sheetbtns"><button type="button" class="btn primary" id="f-s" style="flex:2">'+(isNew?"Legg til":"Lagre")+'</button>'+
+      (isNew?'<button type="button" class="btn" id="f-c" style="flex:1">Avbryt</button>'
+            :'<button type="button" class="btn danger" id="f-d" style="flex:1">Fjern</button>')+'</div>';
+
   openSheet(h,function(sh){
-    sh.querySelector("#l-s").onclick=function(){
-      var t=sh.querySelector("#l-t").value.trim();if(!t)return;
-      l.text=t;l.qty=sh.querySelector("#l-q").value.trim();
-      Store.save("list",l);closeSheet();render();
+    var pick={cat:d.cat||"Annet",unit:u0};
+    sh.querySelectorAll("[data-chips]").forEach(function(g){
+      g.addEventListener("click",function(e){
+        var b=e.target.closest("button[data-val]");if(!b)return;
+        g.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false");});
+        b.setAttribute("aria-pressed","true");pick[g.dataset.chips]=b.dataset.val;
+      });
+    });
+    function markChips(k,v){
+      var g=sh.querySelector('[data-chips="'+k+'"]');
+      if(g)g.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.val===v));});
+    }
+    function drawPic(){
+      var box=sh.querySelector("#f-pic"),src=photoSrc(pic);
+      box.innerHTML=(src?'<img class="photo-prev" src="'+esc(src)+'" alt="Valgt bilde">':"")+
+        '<div class="picbtns">'+
+          '<button type="button" class="mini" id="pc">'+(src?"Nytt bilde":"Ta bilde")+'</button>'+
+          '<button type="button" class="mini" id="pa">Velg bilde</button>'+
+          (src?'<button type="button" class="mini" id="pd">Fjern</button>':"")+
+          (src?'<button type="button" class="mini" id="pi">Foreslå utfylling</button>':"")+
+        '</div>';
+      function took(r){
+        if(pic.photoId&&pic.photoId!==r.photoId)dropPhoto(pic.photoId);
+        pic.photoId=r.photoId;pic.photo=r.photo;pic.blob=r.blob||null;
+        drawPic();
+        identify();
+      }
+      box.querySelector("#pc").onclick=function(){pickPhoto(took,true);};
+      box.querySelector("#pa").onclick=function(){pickPhoto(took,false);};
+      var pd=box.querySelector("#pd");
+      if(pd)pd.onclick=function(){dropPhoto(pic.photoId);pic.photoId=null;pic.photo=null;pic.blob=null;drawPic();};
+      var pi=box.querySelector("#pi");
+      if(pi)pi.onclick=identify;
+    }
+    /* Foreslår navn, antall, kategori og enhet ut fra bildet – alt kan rettes */
+    function identify(){
+      var stat=sh.querySelector("#f-pstat");
+      function say(t){if(!stat)return;stat.hidden=!t;stat.textContent=t||"";}
+      if(!pic.blob)return say("Ta eller velg bildet på nytt for å få forslag.");
+      var why=aiWhy();
+      if(why)return say(why);
+      say("Leser bildet …");
+      SAMPLE.json('Bildet viser én ting som skal på pakkelista til en hytte.\n'+
+        'Er det en strekkode eller produktetikett, identifiser produktet.\n'+
+        'Svar med KUN ett JSON-objekt: {"navn":"Kaffe","kategori":"Mat","enhet":"poser","antall":2}\n'+
+        'kategori må være en av: '+CATS.join(", ")+'.\nenhet må være en av: '+UNITS.join(", ")+'.\n'+
+        'Bruk norsk navn. Antall er hvor mange du ser, minst 1.',
+        {images:pic.blob,modelTier:"default",cache:false})
+      .then(function(r){
+        if(!sheetEl)return;
+        say("");
+        if(!r)return;
+        var nm=sh.querySelector("#f-name"),tok=[];
+        if(r.navn&&nm&&!nm.value.trim()){nm.value=String(r.navn).slice(0,60);tok.push("navn");}
+        if(UNITS.indexOf(r.enhet)>=0){pick.unit=r.enhet;markChips("unit",r.enhet);tok.push("enhet");}
+        if(CATS.indexOf(r.kategori)>=0){pick.cat=r.kategori;markChips("cat",r.kategori);tok.push("kategori");}
+        var q2=sh.querySelector("#f-q"),n2=parseInt(r.antall,10);
+        if(q2&&n2>0){q2.value=n2;tok.push("antall");}
+        if(r.navn)say("Forslag fra bildet: "+String(r.navn).slice(0,40)+" – rett hvis det er feil");
+        else if(!tok.length)say("Fant ingenting sikkert i bildet – fyll ut selv.");
+        if(tok.length)toast("Fylte ut "+tok.join(", ")+" fra bildet");
+      })
+      .catch(function(e){
+        var c=e&&e.code;
+        var m=(c==="images_unavailable")
+          ?"Denne viseren kan ikke sende bilder til Claude. Fyll ut selv."
+          :scanError(c);
+        say(m||"");
+        if(m&&c!=="images_unavailable")toast(m);
+      });
+    }
+    drawPic();
+    var q=sh.querySelector("#f-q");
+    sh.querySelector("#f-m").onclick=function(){q.value=Math.max(1,(Number(q.value)||1)-1);};
+    sh.querySelector("#f-p").onclick=function(){q.value=(Number(q.value)||0)+1;};
+    sh.querySelector("#f-more").onclick=function(){
+      var x=sh.querySelector("#f-x");x.hidden=!x.hidden;
+      this.setAttribute("aria-expanded",String(!x.hidden));
+      this.textContent=x.hidden?"Flere felt":"Færre felt";
     };
-    sh.querySelector("#l-d").onclick=function(){delLine(l);closeSheet();render();};
+    /* Kjenner appen tingen fra før, fyller vi ut som sist */
+    sh.querySelector("#f-name").addEventListener("change",function(){
+      var v=this.value.trim().toLowerCase(),m=null;
+      S.items.forEach(function(i){if(!m&&i.name.toLowerCase()===v)m=i;});
+      if(!m)return;
+      pick.unit=m.unit||"stk";pick.cat=m.cat||"Annet";
+      markChips("unit",pick.unit);markChips("cat",pick.cat);
+      toast("Fylte ut som forrige gang");
+    });
+    function done(){closeSheet();render();if(after)setTimeout(after,0);}
+    if(sh.querySelector("#f-c"))sh.querySelector("#f-c").onclick=function(){closeSheet();if(after)setTimeout(after,0);};
+    if(sh.querySelector("#f-d"))sh.querySelector("#f-d").onclick=function(){
+      var ex=byId(S.list,d.id);if(ex)delLine(ex);done();
+    };
+    sh.querySelector("#f-s").onclick=function(){
+      var name=sh.querySelector("#f-name").value.trim();
+      if(!name){sh.querySelector("#f-name").focus();return toast("Gi tingen et navn");}
+      var n=Math.max(1,Number(q.value)||1),u=pick.unit||"stk";
+      var o={text:name,cat:pick.cat||"Annet",num:n,unit:u,
+             qty:(n>1||u!=="stk")?(n+" "+u):"",
+             photoId:pic.photoId||null,photo:pic.photo||null};
+      if(isNew){
+        var ex=null;
+        S.items.forEach(function(x){if(!ex&&x.name.toLowerCase()===name.toLowerCase())ex=x;});
+        var entry=Object.assign({id:d.id,packed:false,carry:nextTripList(),order:Date.now()},o);
+        if(ex)entry.itemId=ex.id;
+        S.list.push(entry);Store.save("list",entry);
+        toast(name+" er lagt på lista");
+      }else{
+        var cur=byId(S.list,d.id);
+        if(cur){Object.assign(cur,o);Store.save("list",cur);}
+      }
+      done();
+    };
   });
 }
 
 /* ============================= Hendelser ============================= */
 function bindStatic(){
   document.getElementById("searchbtn").addEventListener("click",function(){
+    if(screen!=="browse")returnTo=(screen==="home"?"home":"step");
     if(screen==="browse"&&!browse.place&&!browse.cat&&(browse.view==="rom"||browse.view==="kat")){screen="step";query="";}
     else{screen="browse";query="";browse.place=null;browse.cat=null;if(browse.view!=="rom"&&browse.view!=="kat")browse.view="rom";}
     render();
     var f=document.getElementById("q");if(f)f.focus();
   });
-  document.getElementById("listbtn").addEventListener("click",listSheet);
   document.getElementById("menubtn").addEventListener("click",menuSheet);
   document.addEventListener("click",function(e){
     var b=e.target.closest("[data-a]");
@@ -1525,7 +2116,15 @@ function bindStatic(){
     if(a==="s-prev"){st.setupIdx=Math.max(0,st.setupIdx-1);Store.saveMeta();window.scrollTo(0,0);render();return;}
     if(a==="s-skipfill"){st.setup="ved";Store.saveMeta();window.scrollTo(0,0);render();return;}
     if(a==="s-done"){st.setup="ferdig";Store.saveMeta();window.scrollTo(0,0);render();return;}
-    if(a==="s-go"){st.onboarded=true;st.phase="plan";Store.saveMeta();window.scrollTo(0,0);render();return;}
+    if(a==="s-go"){st.onboarded=true;st.phase="plan";Store.saveMeta();screen="home";window.scrollTo(0,0);render();return;}
+
+    if(a==="gohome"){if(!st.onboarded)return;screen="home";query="";window.scrollTo(0,0);render();return;}
+    if(a==="gostep"){screen="step";window.scrollTo(0,0);render();return;}
+    if(a==="gorooms"){screen="browse";browse.view="rom";browse.place=null;browse.cat=null;query="";returnTo="home";window.scrollTo(0,0);render();return;}
+    if(a==="goved"){screen="browse";browse.view="ved";browse.place=null;browse.cat=null;query="";returnTo="home";window.scrollTo(0,0);render();return;}
+    if(a==="golist"){listSheet();return;}
+    if(a==="gosearch"){returnTo="home";screen="browse";browse.view="rom";browse.place=null;browse.cat=null;query="";window.scrollTo(0,0);render();var qf=document.getElementById("q");if(qf)qf.focus();return;}
+    if(a==="scan"){photoScan(b.dataset.p);return;}
 
     if(a==="h-add"){
       var hp={id:uid(),type:b.dataset.t,nick:"",order:S.places.length};
@@ -1562,11 +2161,15 @@ function bindStatic(){
     else if(a==="sugadd"){
       var t=b.dataset.s,ex=null;
       S.items.forEach(function(i){if(!ex&&i.name.toLowerCase()===t.toLowerCase())ex=i;});
-      var e={id:uid(),text:t,qty:"",packed:false,carry:false,order:Date.now()};
+      var e={id:uid(),text:t,qty:"",num:1,
+        unit:(ex&&ex.unit)||b.dataset.u||"stk",
+        cat:(ex&&ex.cat)||b.dataset.c||"Annet",
+        packed:false,carry:nextTripList(),order:Date.now()};
       if(ex)e.itemId=ex.id;
-      S.list.push(e);Store.save("list",e);render();
+      S.list.push(e);Store.save("list",e);render();toast(t+" er lagt på lista");
     }
     else if(a==="editline"){var l2=byId(S.list,id);if(l2)lineSheet(l2);}
+    else if(a==="newline"){lineSheet(null);}
     else if(a==="leave"){
       var rest=S.list.filter(function(x){return !x.packed;});
       if(rest.length)leaveSheet(rest);else goPhase("pavei");
@@ -1591,7 +2194,7 @@ function bindStatic(){
     }
     else if(a==="woodpicdel"){dropPhoto(st.woodPhotoId);st.woodPhotoId=null;st.woodPhoto=null;Store.saveMeta();render();}
     /* bla og søk */
-    else if(a==="closebrowse"){screen="step";query="";render();}
+    else if(a==="closebrowse"){screen=(returnTo==="home"?"home":"step");query="";window.scrollTo(0,0);render();}
     else if(a==="tab"){browse.view=b.dataset.t;render();}
     else if(a==="openroom"){browse.place=b.dataset.p;window.scrollTo(0,0);render();}
     else if(a==="uproom"){browse.place=null;render();}
@@ -1627,14 +2230,6 @@ function bindStatic(){
       var again=document.getElementById("additem");if(again)again.focus();
       return;
     }
-    if(e.target.id!=="addform")return;
-    e.preventDefault();
-    var i=document.getElementById("addinput"),v=i.value.trim();
-    if(!v)return;
-    var entry={id:uid(),text:v,qty:"",packed:false,carry:false,order:Date.now()};
-    S.list.push(entry);Store.save("list",entry);
-    i.value="";render();
-    var again=document.getElementById("addinput");if(again)again.focus();
   });
 }
 
